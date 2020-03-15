@@ -31,7 +31,7 @@
                             if ([k intValue]-minPossibleChanges >0 ){
                             if ((addPossibleChanges>=2) && ([s characterAtIndex:i] != [@'9' charValue])){
                             result = [result stringByReplacingCharactersInRange:NSMakeRange(i, 1) withString:@"9"];
-                                result = [result stringByReplacingCharactersInRange:NSMakeRange(s.length-i-1, 1) withString:@"9"];
+                                result = [result stringByReplacingCharactersInRange:NSMakeRange([result length]-1, 1) withString:@"9"];
                                 addPossibleChanges-=2;
                                 continue;
                             }}
